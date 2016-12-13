@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/custom2" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/head"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@id/head"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/publish_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name"
+                android:layout_below="@id/name"
+                android:layout_marginTop="8dp"
+                android:text="2014-12-21"
+                android:textColor="@color/darker_gray" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/descri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/long_str" />
+
+        <include layout="@layout/part_video_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+
+            <ImageView
+                android:id="@+id/love"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/like" />
+
+            <TextView
+                android:id="@+id/love_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/love"
+                android:layout_alignTop="@id/love"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/love"
+                android:gravity="center"
+                android:text="1" />
+
+            <ImageView
+                android:id="@+id/unlove"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@id/love_count"
+                android:src="@mipmap/unlike" />
+
+            <TextView
+                android:id="@+id/unlove_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/unlove"
+                android:layout_alignTop="@id/unlove"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/unlove"
+                android:gravity="center"
+                android:text="1" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
